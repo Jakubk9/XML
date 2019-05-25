@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<!DOCTYPE AmericasCup. SYSTEM "baza.dtd">
+<AmericasCup>
+    <teams>
+        <team id="ETNZ">
+            <name>Emirates Team New Zealand</name>
+            <club>Royal New Zealand Yacht Squadron</club>
+            <nationality code="NZL">New Zealand</nationality>
+            <principal>Grant Dalton</principal>
+            <crew>
+                <helmsman>Peter Burling</helmsman>
+                <tactician>Glenn Ashby</tactician>
+            </crew>
+            <yacht>
+                <name>Aotearoa</name>
+            </yoat>
+        </team>
+    </teams>
+</AmericasCup>
