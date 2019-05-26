@@ -9,6 +9,7 @@
             <nationality code="NZL">New Zealand</nationality>
             <principal>Grant Dalton</principal>
             <tactician>Glenn Ashby</tactician>
+            <victories>3<victories>
             <yacht>
                 <name>Aotearoa</name>
                 <yacht_id refid="NZL-5"></yacht_id>
@@ -27,9 +28,71 @@
     <yachts>
         <yacht yachtid="NZL-5">
             <sailno.>NZL-5<sailno>
-            <class>AC72</class>
+            <class>AC50</class>
             <launched>2013</launched>
             <highest_speed unit="knots">47.57</highest_speed>
         </yacht>
     </yachts>
+    <world_series_regattas>
+        <regattas id="1">
+            <place>Portsmouth</place>
+            <country code="GBR">Great Britian<country>
+            <date>25-26 Jul 2015</date>
+            <races>4</races>
+        </regattas>
+        <regattas id="2">
+            <place>Gothenburg</place>
+            <country code="SWE">Sweden<country>
+            <date>29-30 Aug 2015</date>
+            <races>4</races>
+        </regattas>
+        <regattas id="3">
+            <place>Bermuda</place>
+            <country code="USA">United States<country>
+            <date>17-18 Oct 2015</date>
+            <races>5</races>
+        </regattas>
+        <regattas id="4">
+            <place>Muscat</place>
+            <country code="OM">Oman<country>
+            <date>27-28 Feb 2016</date>
+            <races>6</races>
+        </regattas>
+        <regattas id="5">
+            <place>New York</place>
+            <country code="USA">United States<country>
+            <date>7-8 May 2016</date>
+            <races>5</races>
+        </regattas>
+        <regattas id="6">
+            <place>Chicago</place>
+            <country code="USA">United States<country>
+            <date>11-12 Jun 2016</date>
+            <races>5</races>
+        </regattas>
+        <regattas id="7">
+            <place>Portsmouth</place>
+            <country code="GBR">Great Britian<country>
+            <date>23-24 Jul 2016</date>
+            <races>6</races>
+        </regattas>
+        <regattas id="8">
+            <place>Toulom</place>
+            <country code="FR">France<country>
+            <date>10-11 Sep 2016</date>
+            <races>6</races>
+        </regattas>
+        <regattas id="9">
+            <place>Fukuoka</place>
+            <country code="JPN">Japan<country>
+            <date>19-20 Nov 2016</date>
+            <races>6</races>
+        </regattas>
+        <regattas id="">
+            <place></place>
+            <country code=""><country>
+            <date></date>
+            <races></races>
+        </regattas>
+    </world_series_regattas>
 </AmericasCup>
