@@ -1,0 +1,13 @@
+<!ELEMENT AmericasCup (teams, helmsmans, yachts, world_series_regattas)
+
+<!ELEMENT teams (team+)>
+<!ELEMENT team (name, club, nationality, principal, tactician, victories, yacht)>
+<!ELEMENT name (#PCDATA)> 
+<!ELEMENT club (#PCDATA)> 
+<!ELEMENT nationality (#PCDATA)> 
+<!ELEMENT principal (#PCDATA)> 
+<!ELEMENT tactician (#PCDATA)> 
+<!ELEMENT victories (#PCDATA)> 
+<!ELEMENT yacht (%yacht;)> 
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT yacht_id (#PCDATA)>  
