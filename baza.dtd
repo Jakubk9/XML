@@ -28,8 +28,26 @@
 <!ELEMENT highest_speed (#PCDATA)>
 
 <!ELEMENT world_series_regattas (regattas+)>
-<!ELEMENT reggatas (place, country, date, races)>
-<!ELEMENT place (#PCDATA)>
+<!ELEMENT reggatas (localization, date, races)>
+<!ELEMENT localization(%localization;)>
+<!ELEMENT city (#PCDATA)>
 <!ELEMENT country (#PCDATA)>
 <!ELEMENT date (#PCDATA)>
 <!ELEMENT races (#PCDATA)>
+
+<!ATTLIST team od ID #REQUIRED>
+<!ATTLIST nationality code CDATA #REQUIRED>
+<!ATTLIST yacht_id refid IDREF #REQUIRED>
+<!ENTITY % yacht "name, yacht_id">
+
+<!ATTLIST helmsman_team refid IDREF #REQUIRED>
+<!ATTLIST nationality code CDATA #REQUIRED>
+<!ATTLIST championship_titles amcup CDATA #IMPLIED>
+
+<!ATTLIST yacht yacht_id ID #REQUIRED>
+<!ATTLIST highest_speed unit #FIXED "knots">
+
+<!ATTLIST regattas id ID #REQUIRED
+<!ATTLIST city place (sea|bay|ocean|lake|river)>
+<!ATTLIST country code CDATA #REQUIRED>
+<!ENTITY % localization "city, country">
