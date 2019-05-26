@@ -41,7 +41,7 @@
         </xsd:simpleType>
     </xsd:attribute>
 
-        <xsd:attribute name="place">
+    <xsd:attribute name="place">
         <xsd:simpleType>
             <xsd:restriction base="xsd:string">
                 <xsd:pattern value="[a-z]*"></xsd:pattern>
@@ -49,10 +49,34 @@
         </xsd:simpleType>
     </xsd:attribute>
 
+    <xsd:attribute name="amcup">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="[0-9]{1}"></xsd:pattern>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
+
+    <xsd:complexType name="type_amcup">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute ref="amcup"></xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
      <xsd:complexType name="type_country">
         <xsd:simpleContent>
             <xsd:extension base="xsd:string">
                 <xsd:attribute ref="code"></xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="type_place">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute ref="place"></xsd:attribute>
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
@@ -73,7 +97,7 @@
         </xsd:simpleContent>
     </xsd:complexType>
 
-    <xsd:complexType name="type_yacht">
+    <xsd:complexType name="type_team_yacht">
         <xsd:sequence>
             <xsd:element name="name" type="xsd:string"></xsd:element>
             <xsd:element name="yacht_id" type="type_refid"></xsd:element>
@@ -90,6 +114,7 @@
             <xsd:element name="victories" type="xsd:positiveInteger"></xsd:element>
             <xsd:element name="yacht" type="xsd:type_yacht"></xsd:element>
         </xsd:sequence>
+        <xsd:attribute ref="id"></xsd:attribute>
     </xsd:complexType>
 
     <xsd:complexType name="type_teams">
@@ -100,7 +125,49 @@
 
     <xsd:complexType name="type_helmsman">
         <xsd:sequence>
+            <xsd:element name="helmsman_team" type="type_refid"></xsd:element>
+            <xsd:element name="first_name" type="xsd:string"></xsd:element>
+            <xsd:element name="last_name" type="xsd:string"></xsd:element>
+            <xsd:element name="nationality" type="xsd:type_country"></xsd:element>
+            <xsd:element name="championship_titles" type="xsd:type_amcup"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
 
+    <xsd:complexType name="type_helmsmans">
+        <xsd:sequence>
+            <xsd:element name="helmsman" type="type_helmsman" minOccurs="2" maxOccurs="6"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="type_yacht">
+        <xsd:sequence>
+            <xsd:element name="sailno"></xsd:element>
+            <xsd:element name="class" type="xsd:string"></xsd:element>
+            <xsd:element name="launched" type="xsd:positiveInteger"></xsd:element>
+            <xsd:element name="highest_speed" type="xsd:type_unit"></xsd:element>
+        </xsd:sequence>
+        <xsd:attribute ref="yacht_id"></xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:complexType name="type_yachts">
+        <xsd:sequence>
+            <xsd:element name="yacht" type="type_yacht" minOccurs="2" maxOccurs="6"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="type_localization">
+        <xsd:sequence>
+            <xsd:element name="city" type="xsd:place"></xsd:element>
+            <xsd:element name="yacht_id" type="type_refid"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="regattas">
+        <xsd:sequence>
+            <xsd:element name="localization" type="type_place"></xsd:element>
+            <xsd:element name="class" type="xsd:string"></xsd:element>
+            <xsd:element name="launched" type="xsd:positiveInteger"></xsd:element>
+            <xsd:element name="highest_speed" type="xsd:type_unit"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
 </xsd:schema>
