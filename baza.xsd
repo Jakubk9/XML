@@ -1,52 +1,106 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version='1.0' encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-    <xs:attribute name="id">
-        <xs:simpleType>
-            <xs:restriction base="xs:string">
-                <xs:pattern value="[A-Z]{2,5}"></xs:pattern>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:attribute>
+    <xsd:attribute name="id">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="[A-Z]{2,5}"></xsd:pattern>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
 
-    <xs:attribute name="yacht_id">
-        <xs:simpleType>
-            <xs:restriction base="xs:string">
-                <xs:pattern value="[A-Z]{2,3}-[0-9]{1,2}"></xs:pattern>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:attribute>
+    <xsd:attribute name="yacht_id">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="[A-Z]{2,3}-[0-9]{1,2}"></xsd:pattern>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
 
-        <xs:attribute name="r_id">
-        <xs:simpleType>
-            <xs:restriction base="xs:string">
-                <xs:pattern value="[0-9]{1}"></xs:pattern>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:attribute>
+        <xsd:attribute name="r_id">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="[0-9]{1}"></xsd:pattern>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
 
-    <xs:attribute name="code">
-        <xs:simpleType>
-            <xs:restriction base="xs:string">
-                <xs:pattern value="[A-Z]{2,3}"></xs:pattern>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:attribute>
+    <xsd:attribute name="code">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="[A-Z]{2,3}"></xsd:pattern>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
 
-    <xs:attribute name="unit">
-        <xs:simpleType>
-            <xs:restriction base="xs:string">
-                <xs:pattern value="[a-z]*"></xs:pattern>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:attribute>
+    <xsd:attribute name="unit">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="[a-z]*"></xsd:pattern>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
 
-        <xs:attribute name="place">
-        <xs:simpleType>
-            <xs:restriction base="xs:string">
-                <xs:pattern value="[a-z]*"></xs:pattern>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:attribute>
+        <xsd:attribute name="place">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="[a-z]*"></xsd:pattern>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
 
-</xs:schema>
+     <xsd:complexType name="type_country">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute ref="code"></xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="type_refid">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute ref="refid"></xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="type_unit">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute ref="unit"></xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="type_yacht">
+        <xsd:sequence>
+            <xsd:element name="name" type="xsd:string"></xsd:element>
+            <xsd:element name="yacht_id" type="type_refid"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="type_team">
+        <xsd:sequence>
+            <xsd:element name="name" type="xsd:string"></xsd:element>
+            <xsd:element name="club" type="xsd:string"></xsd:element>
+            <xsd:element name="nationality" type="xsd:type_country"></xsd:element>
+            <xsd:element name="principal" type="xsd:string"></xsd:element>
+            <xsd:element name="tactician" type="xsd:string"></xsd:element>
+            <xsd:element name="victories" type="xsd:positiveInteger"></xsd:element>
+            <xsd:element name="yacht" type="xsd:type_yacht"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="type_teams">
+        <xsd:sequence>
+            <xsd:element name="team" type="type_team" minOccurs="2" maxOccurs="6"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="type_helmsman">
+        <xsd:sequence>
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>
