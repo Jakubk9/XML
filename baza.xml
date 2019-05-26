@@ -15,7 +15,20 @@
                 <yacht_id refid="NZL-5"></yacht_id>
             </yacht>
         </team>
+        <team id="OTUSA">
+            <name>Oracle Team USA</name>
+            <club>Golden Gate Yacht Club</club>
+            <nationality code="USA">United States</nationality>
+            <principal>Russell Coutts</principal>
+            <tactician>Tom Slingsby</tactician>
+            <victories>2<victories>
+            <yacht>
+                <name>USA 17</name>
+                <yacht_id refid="USA-17"></yacht_id>
+            </yacht>
+        </team>
     </teams>
+
     <helmsmans>
         <helmsman>
             <helmsman_team refid="ETNZ"></helmsman_team>
@@ -25,6 +38,7 @@
             <championship_titles>9<championship_titles>
         </helmsman>
     </helmsmans>
+
     <yachts>
         <yacht yachtid="NZL-5">
             <sailno.>NZL-5<sailno>
@@ -33,6 +47,7 @@
             <highest_speed unit="knots">47.57</highest_speed>
         </yacht>
     </yachts>
+
     <world_series_regattas>
         <regattas id="1">
             <place>Portsmouth</place>
