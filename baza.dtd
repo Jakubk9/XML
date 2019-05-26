@@ -26,3 +26,10 @@
 <!ELEMENT class (#PCDATA)>
 <!ELEMENT launched (#PCDATA)>
 <!ELEMENT highest_speed (#PCDATA)>
+
+<!ELEMENT world_series_regattas (regattas+)>
+<!ELEMENT reggatas (place, country, date, races)>
+<!ELEMENT place (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT races (#PCDATA)>
