@@ -158,16 +158,51 @@
     <xsd:complexType name="type_localization">
         <xsd:sequence>
             <xsd:element name="city" type="xsd:place"></xsd:element>
-            <xsd:element name="yacht_id" type="type_refid"></xsd:element>
+            <xsd:element name="country" type="type_country"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
 
-    <xsd:complexType name="regattas">
+    <xsd:complexType name="type_regattas">
         <xsd:sequence>
             <xsd:element name="localization" type="type_place"></xsd:element>
-            <xsd:element name="class" type="xsd:string"></xsd:element>
-            <xsd:element name="launched" type="xsd:positiveInteger"></xsd:element>
-            <xsd:element name="highest_speed" type="xsd:type_unit"></xsd:element>
+            <xsd:element name="date" type="xsd:string"></xsd:element>
+            <xsd:element name="races" type="xsd:positiveInteger"></xsd:element>
+        </xsd:sequence>
+        <xsd:attribute ref="r_id"></xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:complexType name="type_world_series_regattas">
+        <xsd:sequence>
+            <xsd:element name="regattas" type="type_regattas" minOccurs="2" maxOccurs="6"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
+
+    <xsd:complexType name="type_AmericasCup">
+        <xsd:sequence>
+            <xsd:element name="teams" type="type_teams"></xsd:element>
+            <xsd:element name="helmsmans" type="type_helmsmans"></xsd:element>
+            <xsd:element name="yachts" type="type_yachts"></xsd:element>
+            <xsd:element name="world_series_regattas" type="type_world_series_regattas"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xs:element name="AmericasCup" type="type_AmericasCup">
+
+    <xsd:key name="team_key">
+        <xsd:selector xpath=".//teams/team"></xs:selector>
+        <xsd:field xpath="@id"></xs:field>
+    </xsd:key>
+    <xs:keyref name="helmsman_team_ref" refer="team_key">
+        <xs:selector xpath=".//helmsmans/helmsman/helmsman_team"></xs:selector>
+        <xs:field xpath="@refid"></xs:field>
+    </xs:keyref>
+    <xsd:key name="yacht_key">
+        <xsd:selector xpath=".//yachts/yacht"></xs:selector>
+        <xsd:field xpath="@yacht_id"></xs:field>
+    </xsd:key>
+    <xs:keyref name="yacht_id_ref" refer="yacht_key">
+        <xs:selector xpath=".//teams/team/team_yacht/yacht_id"></xs:selector>
+        <xs:field xpath="@refid"></xs:field>
+    </xs:keyref>
+
 </xsd:schema>
