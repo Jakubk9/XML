@@ -1,4 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    
+
+    <xs:attribute name="id">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z]{2,5}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="yacht_id">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z]{2,3}-[0-9]{1,2}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+        <xs:attribute name="r_id">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[0-9]{1}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="code">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z]{2,3}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="unit">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[a-z]*"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+        <xs:attribute name="place">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[a-z]*"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
 </xs:schema>
