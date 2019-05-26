@@ -1,4 +1,23 @@
-<!ELEMENT AmericasCup (teams, helmsmans, yachts, world_series_regattas)
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ATTLIST team id ID #REQUIRED>
+<!ATTLIST nationality code CDATA #REQUIRED>
+<!ATTLIST yacht_id refid IDREF #REQUIRED>
+<!ENTITY % team_yacht "yacht_name, yacht_id">
+
+<!ATTLIST helmsman_team refid IDREF #REQUIRED>
+<!ATTLIST nationality code CDATA #REQUIRED>
+<!ATTLIST championship_titles amcup CDATA #IMPLIED>
+
+<!ATTLIST yacht yacht_id ID #REQUIRED>
+<!ATTLIST highest_speed unit CDATA #FIXED "knots">
+
+<!ATTLIST regattas r_id ID #REQUIRED>
+<!ATTLIST city place (sea | bay | ocean | lake | river) "sea">
+<!ATTLIST country code CDATA #REQUIRED>
+<!ENTITY % localization "city, country">
+
+<!ELEMENT AmericasCup (teams, helmsmans, yachts, world_series_regattas)>
 
 <!ELEMENT teams (team+)>
 <!ELEMENT team (name, club, nationality, principal, tactician, victories, team_yacht)>
@@ -8,8 +27,8 @@
 <!ELEMENT principal (#PCDATA)> 
 <!ELEMENT tactician (#PCDATA)> 
 <!ELEMENT victories (#PCDATA)> 
-<!ELEMENT team_yacht (%yacht;)> 
-<!ELEMENT name (#PCDATA)>
+<!ELEMENT team_yacht (%team_yacht;)> 
+<!ELEMENT yacht_name (#PCDATA)>
 <!ELEMENT yacht_id (#PCDATA)>  
 
 <!ELEMENT helmsmans (helmsman+)>
@@ -17,7 +36,6 @@
 <!ELEMENT helmsman_team (#PCDATA)>
 <!ELEMENT first_name (#PCDATA)>
 <!ELEMENT last_name (#PCDATA)>
-<!ELEMENT nationality (#PCDATA)>
 <!ELEMENT championship_titles (#PCDATA)>
 
 <!ELEMENT yachts (yacht+)>
@@ -28,26 +46,10 @@
 <!ELEMENT highest_speed (#PCDATA)>
 
 <!ELEMENT world_series_regattas (regattas+)>
-<!ELEMENT reggatas (localization, date, races)>
-<!ELEMENT localization(%localization;)>
+<!ELEMENT regattas (localization, date, races)>
+<!ELEMENT localization (%localization;)>
 <!ELEMENT city (#PCDATA)>
 <!ELEMENT country (#PCDATA)>
 <!ELEMENT date (#PCDATA)>
 <!ELEMENT races (#PCDATA)>
 
-<!ATTLIST team od ID #REQUIRED>
-<!ATTLIST nationality code CDATA #REQUIRED>
-<!ATTLIST yacht_id refid IDREF #REQUIRED>
-<!ENTITY % yacht "name, yacht_id">
-
-<!ATTLIST helmsman_team refid IDREF #REQUIRED>
-<!ATTLIST nationality code CDATA #REQUIRED>
-<!ATTLIST championship_titles amcup CDATA #IMPLIED>
-
-<!ATTLIST yacht yacht_id ID #REQUIRED>
-<!ATTLIST highest_speed unit #FIXED "knots">
-
-<!ATTLIST regattas id ID #REQUIRED
-<!ATTLIST city place (sea|bay|ocean|lake|river)>
-<!ATTLIST country code CDATA #REQUIRED>
-<!ENTITY % localization "city, country">

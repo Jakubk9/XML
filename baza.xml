@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="style.css"?>
-<!DOCTYPE AmericasCup. SYSTEM "baza.dtd">
+<!DOCTYPE AmericasCup SYSTEM "baza.dtd">
 <AmericasCup>
     <teams>
         <team id="ETNZ">
@@ -9,69 +9,74 @@
             <nationality code="NZL">New Zealand</nationality>
             <principal>Grant Dalton</principal>
             <tactician>Glenn Ashby</tactician>
-            <victories>3<victories>
+            <victories>3</victories>
             <team_yacht>
-                <name>Aotearoa</name>
+                <yacht_name>Aotearoa</yacht_name>
                 <yacht_id refid="NZL-5"></yacht_id>
             </team_yacht>
         </team>
+
         <team id="OTUSA">
             <name>Oracle Team USA</name>
             <club>Golden Gate Yacht Club</club>
             <nationality code="USA">United States</nationality>
             <principal>Russell Coutts</principal>
             <tactician>Tom Slingsby</tactician>
-            <victories>2<victories>
+            <victories>2</victories>
             <team_yacht>
-                <name>USA 17</name>
+                <yacht_name>USA 17</yacht_name>
                 <yacht_id refid="USA-17"></yacht_id>
             </team_yacht>
         </team>
+
         <team id="AR">
             <name>Artemis Racing</name>
             <club>Kungliga Svenska Segelsällskapet</club>
             <nationality code="SWE">Sweden</nationality>
             <principal>Torbjörn Törnqvist</principal>
             <tactician>Iain Percy</tactician>
-            <victories>0<victories>
+            <victories>0</victories>
             <team_yacht>
-                <name>Magic Blue</name>
+                <yacht_name>Magic Blue</yacht_name>
                 <yacht_id refid="SWE-1"></yacht_id>
             </team_yacht>
         </team>
-            <team id="GTF">
+
+        <team id="GTF">
             <name>Groupama Team France</name>
             <club>Yacht Club de France</club>
             <nationality code="FR">France</nationality>
             <principal>Franck Cammas</principal>
             <tactician>Thomas Le Breton</tactician>
-            <victories>0<victories>
+            <victories>0</victories>
             <team_yacht>
-                <name>Groupama AC</name>
+                <yacht_name>Groupama AC</yacht_name>
                 <yacht_id refid="FR-1"></yacht_id>
             </team_yacht>
         </team>
-            <team id="LRBAR">
+
+        <team id="LRBAR">
             <name>Land Rover BAR</name>
             <club>Royal Cornwall Yacht Club</club>
             <nationality code="GBR">Great Britain</nationality>
             <principal>Sir Jim Ratcliffe</principal>
             <tactician>Giles Scott</tactician>
-            <victories>0<victories>
+            <victories>0</victories>
             <team_yacht>
-                <name>R1</name>
+                <yacht_name>R1</yacht_name>
                 <yacht_id refid="GBR-1"></yacht_id>
             </team_yacht>
         </team>
+
         <team id="SBTJ">
             <name>SoftBank Team Japan</name>
             <club>Kansai Yacht Club</club>
             <nationality code="JPN">Japan</nationality>
             <principal>Kazuhiko Sofuku</principal>
             <tactician>Chris Draper</tactician>
-            <victories>0<victories>
+            <victories>0</victories>
             <team_yacht>
-                <name>Soft</name>
+                <yacht_name>Soft</yacht_name>
                 <yacht_id refid="JPN-1"></yacht_id>
             </team_yacht>
         </team>
@@ -82,79 +87,89 @@
             <helmsman_team refid="ETNZ"></helmsman_team>
             <first_name>Peter</first_name>
             <last_name>Burling</last_name>
-            <nationality code="NZL">New Zealand<nationality>
-            <championship_titles amcup="1">9<championship_titles>
+            <nationality code="NZL">New Zealand</nationality>
+            <championship_titles amcup="1">9</championship_titles>
         </helmsman>
+
         <helmsman>
             <helmsman_team refid="OTUSA"></helmsman_team>
             <first_name>Jimmy</first_name>
             <last_name>Spithill</last_name>
-            <nationality code="AUS">Australian<nationality>
-            <championship_titles amcup="1">3<championship_titles>
+            <nationality code="AUS">Australian</nationality>
+            <championship_titles amcup="1">3</championship_titles>
         </helmsman>
+
         <helmsman>
             <helmsman_team refid="AR"></helmsman_team>
             <first_name>Nathan</first_name>
             <last_name>Outteridge</last_name>
-            <nationality code="AUS">Australian<nationality>
-            <championship_titles>8<championship_titles>
+            <nationality code="AUS">Australian</nationality>
+            <championship_titles>8</championship_titles>
         </helmsman>
+
         <helmsman>
             <helmsman_team refid="GTF"></helmsman_team>
             <first_name>Franck</first_name>
             <last_name>Cammas</last_name>
-            <nationality code="FR">France<nationality>
-            <championship_titles>5<championship_titles>
+            <nationality code="FR">France</nationality>
+            <championship_titles>5</championship_titles>
         </helmsman>
+
         <helmsman>
             <helmsman_team refid="LRBAR"></helmsman_team>
             <first_name>Ben</first_name>
             <last_name>Ainslie</last_name>
-            <nationality code="GBR">Great Britain<nationality>
-            <championship_titles>12<championship_titles>
+            <nationality code="GBR">Great Britain</nationality>
+            <championship_titles>12</championship_titles>
         </helmsman>
-            <helmsman>
+
+        <helmsman>
             <helmsman_team refid="SBTJ"></helmsman_team>
             <first_name>Dean</first_name>
             <last_name>Barker</last_name>
-            <nationality code="NZL">New Zealand<nationality>
-            <championship_titles>2<championship_titles>
+            <nationality code="NZL">New Zealand</nationality>
+            <championship_titles>2</championship_titles>
         </helmsman>
     </helmsmans>
 
     <yachts>
         <yacht yacht_id="NZL-5">
-            <sailno>NZL-5<sailno>
+            <sailno>NZL-5</sailno>
             <class>AC50</class>
             <launched>2013</launched>
             <highest_speed unit="knots">47.57</highest_speed>
         </yacht>
+
         <yacht yacht_id="USA-17">
-            <sailno>USA-17<sailno>
+            <sailno>USA-17</sailno>
             <class>AC50</class>
             <launched>2010</launched>
             <highest_speed unit="knots">46.3</highest_speed>
         </yacht>
+
         <yacht yacht_id="SWE-1">
-            <sailno>SWE-1<sailno>
+            <sailno>SWE-1</sailno>
             <class>AC50</class>
             <launched>2013</launched>
             <highest_speed unit="knots">47.2</highest_speed>
         </yacht>
+
         <yacht yacht_id="FR-1">
-            <sailno>FR-1<sailno>
+            <sailno>FR-1</sailno>
             <class>AC50</class>
             <launched>2013</launched>
             <highest_speed unit="knots">45</highest_speed>
         </yacht>
+
         <yacht yacht_id="GBR-1">
-            <sailno>GBR-1<sailno>
+            <sailno>GBR-1</sailno>
             <class>AC50</class>
             <launched>2012</launched>
             <highest_speed unit="knots">46.73</highest_speed>
         </yacht>
+
         <yacht yacht_id="JPN-1">
-            <sailno>JPN-1<sailno>
+            <sailno>JPN-1</sailno>
             <class>AC50</class>
             <launched>2014</launched>
             <highest_speed unit="knots">45.93</highest_speed>
@@ -162,74 +177,82 @@
     </yachts>
 
     <world_series_regattas>
-        <regattas r_id="1">
+        <regattas r_id="R1">
             <localization>
                 <city place="sea">Portsmouth</city>
-                <country code="GBR">Great Britain<country>
+                <country code="GBR">Great Britain</country>
             </localization>
             <date>25-26 Jul 2015</date>
             <races>4</races>
         </regattas>
-        <regattas r_id="2">
+
+        <regattas r_id="R2">
             <localization>
                 <city place="bay">Gothenburg</city>
-                <country code="SWE">Sweden<country>
+                <country code="SWE">Sweden</country>
             </localization>
             <date>29-30 Aug 2015</date>
             <races>4</races>
         </regattas>
-        <regattas r_id="3">
+
+        <regattas r_id="R3">
             <localization>
                 <city place="ocean">Bermuda</city>
-                <country code="USA">United States<country>
+                <country code="USA">United States</country>
             </localization>
             <date>17-18 Oct 2015</date>
             <races>5</races>
         </regattas>
-        <regattas r_id="4">
+
+        <regattas r_id="R4">
             <localization>
                 <city place="ocean">Muscat</city>
-                <country code="OM">Oman<country>
+                <country code="OM">Oman</country>
             </localization>
             <date>27-28 Feb 2016</date>
             <races>6</races>
         </regattas>
-        <regattas r_id="5">
+
+        <regattas r_id="R5">
             <localization>
                 <city place="river">New York</city>
-                <country code="USA">United States<country>
+                <country code="USA">United States</country>
             </localization>
             <date>7-8 May 2016</date>
             <races>5</races>
         </regattas>
-        <regattas r_id="6">
+
+        <regattas r_id="R6">
             <localization>
                 <city place="lake">Chicago</city>
-                <country code="USA">United States<country>
+                <country code="USA">United States</country>
             </localization>
             <date>11-12 Jun 2016</date>
             <races>5</races>
         </regattas>
-        <regattas r_id="7">
+
+        <regattas r_id="R7">
             <localization>
                 <city place="sea">Portsmouth</city>
-                <country code="GBR">Great Britain<country>
+                <country code="GBR">Great Britain</country>
             </localization>
             <date>23-24 Jul 2016</date>
             <races>6</races>
         </regattas>
-        <regattas r_id="8">
+
+        <regattas r_id="R8">
             <localization>
                 <city place="sea">Toulom</city>
-                <country code="FR">France<country>
+                <country code="FR">France</country>
             </localization>
             <date>10-11 Sep 2016</date>
             <races>6</races>
         </regattas>
-        <regattas r_id="9">
+
+        <regattas r_id="R9">
             <localization>
                 <city place="bay">Fukuoka</city>
-                <country code="JPN">Japan<country>
+                <country code="JPN">Japan</country>
             </localization>
             <date>19-20 Nov 2016</date>
             <races>6</races>
