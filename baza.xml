@@ -8,13 +8,28 @@
             <club>Royal New Zealand Yacht Squadron</club>
             <nationality code="NZL">New Zealand</nationality>
             <principal>Grant Dalton</principal>
-            <crew>
-                <helmsman>Peter Burling</helmsman>
-                <tactician>Glenn Ashby</tactician>
-            </crew>
+            <tactician>Glenn Ashby</tactician>
             <yacht>
                 <name>Aotearoa</name>
-            </yoat>
+                <yacht_id refid="NZL-5"></yacht_id>
+            </yacht>
         </team>
     </teams>
+    <helmsmans>
+        <helmsman>
+            <helmsman_team refid="ETNZ"></helmsman_team>
+            <first_name>Peter</first_name>
+            <last_name>Burling</last_name>
+            <nationality code="NZL">New Zealand<nationality>
+            <championship_titles>9<championship_titles>
+        </helmsman>
+    </helmsmans>
+    <yachts>
+        <yacht yachtid="NZL-5">
+            <sailno.>NZL-5<sailno>
+            <class>AC72</class>
+            <launched>2013</launched>
+            <highest_speed unit="knots">47.57</highest_speed>
+        </yacht>
+    </yachts>
 </AmericasCup>
