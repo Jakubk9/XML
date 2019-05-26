@@ -216,11 +216,5 @@
             <date>19-20 Nov 2016</date>
             <races>6</races>
         </regattas>
-        <regattas id="">
-            <place></place>
-            <country code=""><country>
-            <date></date>
-            <races></races>
-        </regattas>
     </world_series_regattas>
 </AmericasCup>
