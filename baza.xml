@@ -54,7 +54,7 @@
             <team id="LRBAR">
             <name>Land Rover BAR</name>
             <club>Royal Cornwall Yacht Club</club>
-            <nationality code="GBR">Great Britian</nationality>
+            <nationality code="GBR">Great Britain</nationality>
             <principal>Sir Jim Ratcliffe</principal>
             <tactician>Giles Scott</tactician>
             <victories>0<victories>
@@ -85,6 +85,41 @@
             <nationality code="NZL">New Zealand<nationality>
             <championship_titles>9<championship_titles>
         </helmsman>
+        <helmsman>
+            <helmsman_team refid="OTUSA"></helmsman_team>
+            <first_name>Jimmy</first_name>
+            <last_name>Spithill</last_name>
+            <nationality code="AUS">Australian<nationality>
+            <championship_titles>3<championship_titles>
+        </helmsman>
+        <helmsman>
+            <helmsman_team refid="AR"></helmsman_team>
+            <first_name>Nathan</first_name>
+            <last_name>Outteridge</last_name>
+            <nationality code="AUS">Australian<nationality>
+            <championship_titles>8<championship_titles>
+        </helmsman>
+        <helmsman>
+            <helmsman_team refid="GTF"></helmsman_team>
+            <first_name>Franck</first_name>
+            <last_name>Cammas</last_name>
+            <nationality code="FR">France<nationality>
+            <championship_titles>5<championship_titles>
+        </helmsman>
+        <helmsman>
+            <helmsman_team refid="LRBAR"></helmsman_team>
+            <first_name>Ben</first_name>
+            <last_name>Ainslie</last_name>
+            <nationality code="GBR">Great Britain<nationality>
+            <championship_titles>12<championship_titles>
+        </helmsman>
+            <helmsman>
+            <helmsman_team refid="SBTJ"></helmsman_team>
+            <first_name>Dean</first_name>
+            <last_name>Barker</last_name>
+            <nationality code="NZL">New Zealand<nationality>
+            <championship_titles>2<championship_titles>
+        </helmsman>
     </helmsmans>
 
     <yachts>
@@ -99,7 +134,7 @@
     <world_series_regattas>
         <regattas id="1">
             <place>Portsmouth</place>
-            <country code="GBR">Great Britian<country>
+            <country code="GBR">Great Britain<country>
             <date>25-26 Jul 2015</date>
             <races>4</races>
         </regattas>
@@ -135,7 +170,7 @@
         </regattas>
         <regattas id="7">
             <place>Portsmouth</place>
-            <country code="GBR">Great Britian<country>
+            <country code="GBR">Great Britain<country>
             <date>23-24 Jul 2016</date>
             <races>6</races>
         </regattas>
