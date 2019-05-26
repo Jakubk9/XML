@@ -27,6 +27,54 @@
                 <yacht_id refid="USA-17"></yacht_id>
             </yacht>
         </team>
+        <team id="AR">
+            <name>Artemis Racing</name>
+            <club>Kungliga Svenska Segelsällskapet</club>
+            <nationality code="SWE">Sweden</nationality>
+            <principal>Torbjörn Törnqvist</principal>
+            <tactician>Iain Percy</tactician>
+            <victories>0<victories>
+            <yacht>
+                <name>Big Blue</name>
+                <yacht_id refid="SWE-1"></yacht_id>
+            </yacht>
+        </team>
+            <team id="GTF">
+            <name>Groupama Team France</name>
+            <club>Yacht Club de France</club>
+            <nationality code="FR">France</nationality>
+            <principal>Franck Cammas</principal>
+            <tactician>Thomas Le Breton</tactician>
+            <victories>0<victories>
+            <yacht>
+                <name>Groupama AC</name>
+                <yacht_id refid="FR-1"></yacht_id>
+            </yacht>
+        </team>
+            <team id="LRBAR">
+            <name>Land Rover BAR</name>
+            <club>Royal Cornwall Yacht Club</club>
+            <nationality code="GBR">Great Britian</nationality>
+            <principal>Sir Jim Ratcliffe</principal>
+            <tactician>Giles Scott</tactician>
+            <victories>0<victories>
+            <yacht>
+                <name>R1</name>
+                <yacht_id refid="GBR-1"></yacht_id>
+            </yacht>
+        </team>
+        <team id="SBTJ">
+            <name>SoftBank Team Japan</name>
+            <club>Kansai Yacht Club</club>
+            <nationality code="JPN">Japan</nationality>
+            <principal>Kazuhiko Sofuku</principal>
+            <tactician>Chris Draper</tactician>
+            <victories>0<victories>
+            <yacht>
+                <name>Soft</name>
+                <yacht_id refid="JPN-1"></yacht_id>
+            </yacht>
+        </team>
     </teams>
 
     <helmsmans>
