@@ -35,7 +35,7 @@
             <tactician>Iain Percy</tactician>
             <victories>0<victories>
             <yacht>
-                <name>Big Blue</name>
+                <name>Magic Blue</name>
                 <yacht_id refid="SWE-1"></yacht_id>
             </yacht>
         </team>
@@ -128,6 +128,36 @@
             <class>AC50</class>
             <launched>2013</launched>
             <highest_speed unit="knots">47.57</highest_speed>
+        </yacht>
+        <yacht yachtid="USA-17">
+            <sailno.>USA-17<sailno>
+            <class>AC50</class>
+            <launched>2010</launched>
+            <highest_speed unit="knots">46.3</highest_speed>
+        </yacht>
+        <yacht yachtid="SWE-1">
+            <sailno.>SWE-1<sailno>
+            <class>AC50</class>
+            <launched>2013</launched>
+            <highest_speed unit="knots">47.2</highest_speed>
+        </yacht>
+        <yacht yachtid="FR-1">
+            <sailno.>FR-1<sailno>
+            <class>AC50</class>
+            <launched>2013</launched>
+            <highest_speed unit="knots">45</highest_speed>
+        </yacht>
+        <yacht yachtid="GBR-1">
+            <sailno.>GBR-1<sailno>
+            <class>AC50</class>
+            <launched>2012</launched>
+            <highest_speed unit="knots">46.73</highest_speed>
+        </yacht>
+        <yacht yachtid="JPN-1">
+            <sailno.>JPN-1<sailno>
+            <class>AC50</class>
+            <launched>2014</launched>
+            <highest_speed unit="knots">45.93</highest_speed>
         </yacht>
     </yachts>
 
