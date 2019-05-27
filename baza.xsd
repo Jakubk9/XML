@@ -111,8 +111,8 @@
             <xsd:element name="nationality" type="xsd:type_country"></xsd:element>
             <xsd:element name="principal" type="xsd:string"></xsd:element>
             <xsd:element name="tactician" type="xsd:string"></xsd:element>
-            <xsd:element name="victories" type="xsd:positiveInteger"></xsd:element>
-            <xsd:element name="yacht" type="xsd:type_yacht"></xsd:element>
+            <xsd:element name="victories" type="xsd:nonNegativeInteger"></xsd:element>
+            <xsd:element name="team_yacht" type="xsd:type_yacht"></xsd:element>
         </xsd:sequence>
         <xsd:attribute ref="id"></xsd:attribute>
     </xsd:complexType>
@@ -164,7 +164,7 @@
 
     <xsd:complexType name="type_regattas">
         <xsd:sequence>
-            <xsd:element name="localization" type="type_place"></xsd:element>
+            <xsd:element name="localization" type="type_localization"></xsd:element>
             <xsd:element name="date" type="xsd:string"></xsd:element>
             <xsd:element name="races" type="xsd:positiveInteger"></xsd:element>
         </xsd:sequence>
@@ -173,7 +173,7 @@
 
     <xsd:complexType name="type_world_series_regattas">
         <xsd:sequence>
-            <xsd:element name="regattas" type="type_regattas" minOccurs="2" maxOccurs="6"></xsd:element>
+            <xsd:element name="regattas" type="type_regattas" minOccurs="2" maxOccurs="10"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
 
