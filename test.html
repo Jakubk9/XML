@@ -1,0 +1,294 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>XSLT EEEESSSSSSAAAA</title>
+<style>
+                    table {
+                    border: 2px solid black;
+                    border-collapse: collapse;
+                    }
+                    td, th, tr {
+                    border: 1px solid black;
+                    text-align: center;
+                    }
+                    p {
+                    color: green;
+                    font-weight: bold;
+                    }
+                </style>
+</head>
+<body><div class="container-fluid"><div class="row"><div class="col-12 p-0"><div class="jumbotron min-vh-100 text-center d-flex flex-column">
+<div id="teams">
+<p>TEAMS:</p>
+<table class="table table-hover table-striped">
+<thead class="thead-dark"><tr>
+<th>ID</th>
+<th>NAME</th>
+<th>CLUB</th>
+<th>NATIONALITY</th>
+<th>PRINCIPAL</th>
+<th>TACTICIAN</th>
+<th>VICTORIES</th>
+<th colspan="2">TEAM YACHT</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="color: #00CED1;">ETNZ</td>
+<td style="color: #00CED1;">Emirates Team New Zealand</td>
+<td>Royal New Zealand Yacht Squadron</td>
+<td>New Zealand (NZL)</td>
+<td>Grant Dalton</td>
+<td>Glenn Ashby</td>
+<td>3</td>
+<td>Aotearoa</td>
+<td> NZL-5 sailno</td>
+</tr>
+<tr>
+<td style="color: red;">OTUSA</td>
+<td style="color: red;">Oracle Team USA</td>
+<td>Golden Gate Yacht Club</td>
+<td>United States (USA)</td>
+<td>Russell Coutts</td>
+<td>Tom Slingsby</td>
+<td>2</td>
+<td>USA 17</td>
+<td> USA-17 sailno</td>
+</tr>
+<tr>
+<td style="color: blue;">AR</td>
+<td style="color: blue;">Artemis Racing</td>
+<td>Kungliga Svenska Segelsällskapet</td>
+<td>Sweden (SWE)</td>
+<td>Torbjörn Törnqvist</td>
+<td>Iain Percy</td>
+<td>0</td>
+<td>Magic Blue</td>
+<td> SWE-1 sailno</td>
+</tr>
+<tr>
+<td style="color: pink;">GTF</td>
+<td style="color: pink;">Groupama Team France</td>
+<td>Yacht Club de France</td>
+<td>France (FR)</td>
+<td>Franck Cammas</td>
+<td>Thomas Le Breton</td>
+<td>0</td>
+<td>Groupama AC</td>
+<td> FR-1 sailno</td>
+</tr>
+<tr>
+<td style="color: grey;">LRBAR</td>
+<td style="color: grey;">Land Rover BAR</td>
+<td>Royal Cornwall Yacht Club</td>
+<td>Great Britain (GBR)</td>
+<td>Sir Jim Ratcliffe</td>
+<td>Giles Scott</td>
+<td>0</td>
+<td>R1</td>
+<td> GBR-1 sailno</td>
+</tr>
+<tr>
+<td style="color: yellow;">SBTJ</td>
+<td style="color: yellow;">SoftBank Team Japan</td>
+<td>Kansai Yacht Club</td>
+<td>Japan (JPN)</td>
+<td>Kazuhiko Sofuku</td>
+<td>Chris Draper</td>
+<td>0</td>
+<td>Soft</td>
+<td> JPN-1 sailno</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="helmsnams">
+<p>HELMSMANS:</p>
+<table class="table table-hover table-striped">
+<thead class="thead-dark"><tr>
+<th>TEAM ID</th>
+<th>First name</th>
+<th>Last name</th>
+<th>Nationality</th>
+<th>Championship titles</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="color: #00CED1;">ETNZ</td>
+<td>Peter</td>
+<td>Burling</td>
+<td>New Zealand (NZL)</td>
+<td>9 (1)</td>
+</tr>
+<tr>
+<td style="color: red;">OTUSA</td>
+<td>Jimmy</td>
+<td>Spithill</td>
+<td>Australian (AUS)</td>
+<td>3 (1)</td>
+</tr>
+<tr>
+<td style="color: blue;">AR</td>
+<td>Nathan</td>
+<td>Outteridge</td>
+<td>Australian (AUS)</td>
+<td>8 ()</td>
+</tr>
+<tr>
+<td style="color: yellow;">GTF</td>
+<td>Franck</td>
+<td>Cammas</td>
+<td>France (FR)</td>
+<td>5 ()</td>
+</tr>
+<tr>
+<td style="color: grey;">LRBAR</td>
+<td>Ben</td>
+<td>Ainslie</td>
+<td>Great Britain (GBR)</td>
+<td>12 ()</td>
+</tr>
+<tr>
+<td style="color: pink;">SBTJ</td>
+<td>Dean</td>
+<td>Barker</td>
+<td>New Zealand (NZL)</td>
+<td>2 ()</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="yachts">
+<p>YACHTS:</p>
+<table class="table table-hover table-striped">
+<thead class="thead-dark"><tr>
+<th>ID</th>
+<th>SAILNO.</th>
+<th>CLASS</th>
+<th>LAUNCHED</th>
+<th>HIGHEST SPEED</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="color: #00CED1;">NZL-5</td>
+<td style="color: #00CED1;">NZL-5</td>
+<td>AC50</td>
+<td>2013</td>
+<td>47.57 knots </td>
+</tr>
+<tr>
+<td style="color: blue;">USA-17</td>
+<td style="color: red;">USA-17</td>
+<td>AC50</td>
+<td>2010</td>
+<td>46.3 knots </td>
+</tr>
+<tr>
+<td style="color: red;">SWE-1</td>
+<td style="color: blue;">SWE-1</td>
+<td>AC50</td>
+<td>2013</td>
+<td>47.2 knots </td>
+</tr>
+<tr>
+<td style="color: blue;">FR-1</td>
+<td style="color: red;">FR-1</td>
+<td>AC50</td>
+<td>2013</td>
+<td>45 knots </td>
+</tr>
+<tr>
+<td style="color: red;">GBR-1</td>
+<td style="color: blue;">GBR-1</td>
+<td>AC50</td>
+<td>2012</td>
+<td>46.73 knots </td>
+</tr>
+<tr>
+<td style="color: blue;">JPN-1</td>
+<td style="color: red;">JPN-1</td>
+<td>AC50</td>
+<td>2014</td>
+<td>45.93 knots </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="world_series_regattas">
+<p>WORLD SERIES REGATTAS:</p>
+<table class="table table-hover table-striped">
+<thead class="thead-dark"><tr>
+<th>ID</th>
+<th colspan="2">LOCALIZATION</th>
+<th>DATE</th>
+<th>RACES</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>R1</td>
+<td>Portsmouth (sea)</td>
+<td>Great Britain (GBR)</td>
+<td>25-26 Jul 2015</td>
+<td>4</td>
+</tr>
+<tr>
+<td>R2</td>
+<td>Gothenburg (bay)</td>
+<td>Sweden (SWE)</td>
+<td>29-30 Aug 2015</td>
+<td>4</td>
+</tr>
+<tr>
+<td>R3</td>
+<td>Bermuda (ocean)</td>
+<td>United States (USA)</td>
+<td>17-18 Oct 2015</td>
+<td>5</td>
+</tr>
+<tr>
+<td>R4</td>
+<td>Muscat (ocean)</td>
+<td>Oman (OM)</td>
+<td>27-28 Feb 2016</td>
+<td>6</td>
+</tr>
+<tr>
+<td>R5</td>
+<td>New York (river)</td>
+<td>United States (USA)</td>
+<td>7-8 May 2016</td>
+<td>5</td>
+</tr>
+<tr>
+<td>R6</td>
+<td>Chicago (lake)</td>
+<td>United States (USA)</td>
+<td>11-12 Jun 2016</td>
+<td>5</td>
+</tr>
+<tr>
+<td>R7</td>
+<td>Portsmouth (sea)</td>
+<td>Great Britain (GBR)</td>
+<td>23-24 Jul 2016</td>
+<td>6</td>
+</tr>
+<tr>
+<td>R8</td>
+<td>Toulom (sea)</td>
+<td>France (FR)</td>
+<td>10-11 Sep 2016</td>
+<td>6</td>
+</tr>
+<tr>
+<td>R9</td>
+<td>Fukuoka (bay)</td>
+<td>Japan (JPN)</td>
+<td>19-20 Nov 2016</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div></div></div></body>
+</html>

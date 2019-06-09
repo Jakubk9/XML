@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="style.css"?>
 <!DOCTYPE AmericasCup SYSTEM "baza.dtd">
+<?xml-stylesheet type="text/css" href="baza.css"?>
 <AmericasCup>
     <teams>
         <team id="ETNZ">

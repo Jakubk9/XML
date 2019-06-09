@@ -1,0 +1,189 @@
+/*https://coolors.co/#2d3142-#bfc0c0-#ffffff-#ef8354-#4f5d75*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+AmericasCup:before {
+    content: 'American Cup';
+    text-shadow: #2d3142 4px 4px 5px;
+    display: block;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+AmericasCup:after {
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: fixed;
+    background-image: url("yacht.gif");
+    opacity: 0.8;
+    cursor: not-allowed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 54%;
+    left: 100%;
+    animation: movingYacht 10s infinite linear;
+    overflow-x: hidden;
+    z-index: 999;
+}
+
+
+
+AmericasCup {
+    background: #bfc0c0;
+    width: 1000px;
+    margin: 0 auto;
+    color: #2d3142;
+
+    display: grid;
+    grid-template-columns: 20% 50% 20%;
+    grid-template-rows: auto auto;
+    /*grid-template-rows: 25% 100px auto;*/
+}
+
+AmericasCup > *:before {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: full-width;
+
+}
+
+AmericasCup > teams:before {
+    content: "Teams";
+    width: 100%;
+}
+
+AmericasCup > teams {
+    background-color: #fcde9c;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+AmericasCup > teams > team {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #dbbe82;
+    border-color: #fcde9c;
+    border-width: 3px;
+    border-style: dashed;
+    padding: 2px;
+    line-height: 25px;
+}
+
+AmericasCup > teams > team:nth-child(even) {
+    border-right: none;
+}
+
+AmericasCup > teams > team:nth-child(odd) {
+    border-left: none;
+}
+
+
+AmericasCup > helmsmans:before {
+    content: "Helmsmans";
+}
+
+AmericasCup > helmsmans {
+    background-color: #ef8354;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    counter-reset: helmans-counter;
+}
+
+AmericasCup > helmsmans > helmsman:before {
+    counter-increment: helmans-counter;
+    content: counter(helmans-counter, decimal-leading-zero);
+    display: inline-block;
+    font-weight: bold;
+}
+AmericasCup > helmsmans > helmsman {
+    border: 5px solid #ffa16e;
+    transition: linear 500ms;
+}
+
+AmericasCup > helmsmans > helmsman:hover {
+    background-color: #ffa16e;
+}
+
+AmericasCup > yachts:before {
+    content: "Yachts";
+}
+
+AmericasCup > yachts {
+    background-color: #ef8354;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+AmericasCup > yachts > yacht {
+    border: 5px solid #ffa16e;
+    transition: linear 500ms;
+}
+
+AmericasCup > yachts > yacht:hover {
+    background-color: #ffa16e;
+}
+
+AmericasCup > world_series_regattas:before {
+    content: "World Series Regattas";
+    width: 100%;
+    text-align: center;
+}
+
+AmericasCup > world_series_regattas {
+    padding: 5px;
+    background-color: #4f5d75;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+AmericasCup > world_series_regattas > regattas {
+    display: flex;
+    flex-direction: column;
+    width: 33.3333%;
+    border: 1px solid #5c6c87;
+}
+AmericasCup > world_series_regattas > regattas:hover {
+    background-color: #5c6c87;
+}
+
+
+
+@keyframes movingYacht {
+    from {
+        left: 100%;
+    }
+    to {
+        left: -50%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    AmericasCup {
+        background: #ff756d;
+    }
+}

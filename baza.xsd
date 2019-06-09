@@ -1,208 +1,159 @@
 <?xml version='1.0' encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-    <xsd:attribute name="id">
-        <xsd:simpleType>
-            <xsd:restriction base="xsd:string">
-                <xsd:pattern value="[A-Z]{2,5}"></xsd:pattern>
-            </xsd:restriction>
-        </xsd:simpleType>
-    </xsd:attribute>
+<xsd:include schemaLocation="baza1.xsd"/>
+  <xsd:complexType name="type_amcup">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute ref="amcup"></xsd:attribute>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
 
-    <xsd:attribute name="yacht_id">
-        <xsd:simpleType>
-            <xsd:restriction base="xsd:string">
-                <xsd:pattern value="[A-Z]{2,3}-[0-9]{1,2}"></xsd:pattern>
-            </xsd:restriction>
-        </xsd:simpleType>
-    </xsd:attribute>
+  <xsd:complexType name="type_country">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute ref="code"></xsd:attribute>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
 
-        <xsd:attribute name="r_id">
-        <xsd:simpleType>
-            <xsd:restriction base="xsd:string">
-                <xsd:pattern value="R[0-9]{1}"></xsd:pattern>
-            </xsd:restriction>
-        </xsd:simpleType>
-    </xsd:attribute>
+  <xsd:complexType name="type_place">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute ref="place"></xsd:attribute>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
 
-    <xsd:attribute name="code">
-        <xsd:simpleType>
-            <xsd:restriction base="xsd:string">
-                <xsd:pattern value="[A-Z]{2,3}"></xsd:pattern>
-            </xsd:restriction>
-        </xsd:simpleType>
-    </xsd:attribute>
+  <xsd:complexType name="type_refid">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute ref="refid"></xsd:attribute>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
 
-    <xsd:attribute name="unit">
-        <xsd:simpleType>
-            <xsd:restriction base="xsd:string">
-                <xsd:pattern value="[a-z]*"></xsd:pattern>
-            </xsd:restriction>
-        </xsd:simpleType>
-    </xsd:attribute>
+  <xsd:complexType name="type_unit">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute ref="unit"></xsd:attribute>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
 
-    <xsd:attribute name="place">
-        <xsd:simpleType>
-            <xsd:restriction base="xsd:string">
-                <xsd:pattern value="[a-z]*"></xsd:pattern>
-            </xsd:restriction>
-        </xsd:simpleType>
-    </xsd:attribute>
+  <xsd:complexType name="type_team_yacht">
+    <xsd:all>
+      <xsd:element name="yacht_name" type="xsd:string"></xsd:element>
+      <xsd:element name="yacht_id" type="type_refid"></xsd:element>
+    </xsd:all>
+  </xsd:complexType>
 
-    <xsd:attribute name="amcup">
-        <xsd:simpleType>
-            <xsd:restriction base="xsd:string">
-                <xsd:pattern value="[0-9]{1}"></xsd:pattern>
-            </xsd:restriction>
-        </xsd:simpleType>
-    </xsd:attribute>
+  <xsd:complexType name="type_team">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"></xsd:element>
+      <xsd:element name="club" type="xsd:string"></xsd:element>
+      <xsd:element name="nationality" type="type_country"></xsd:element>
+      <xsd:element name="principal" type="xsd:string"></xsd:element>
+      <xsd:element name="tactician" type="xsd:string"></xsd:element>
+      <xsd:element name="victories" type="xsd:nonNegativeInteger"></xsd:element>
+      <xsd:element name="team_yacht" type="type_team_yacht"></xsd:element>
+    </xsd:sequence>
+    <xsd:attribute ref="id"></xsd:attribute>
+  </xsd:complexType>
 
-    <xsd:complexType name="type_amcup">
-        <xsd:simpleContent>
-            <xsd:extension base="xsd:string">
-                <xsd:attribute ref="amcup"></xsd:attribute>
-            </xsd:extension>
-        </xsd:simpleContent>
-    </xsd:complexType>
+  <xsd:complexType name="type_teams">
+    <xsd:sequence>
+      <xsd:element name="team" type="type_team" minOccurs="2" maxOccurs="6"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
 
-     <xsd:complexType name="type_country">
-        <xsd:simpleContent>
-            <xsd:extension base="xsd:string">
-                <xsd:attribute ref="code"></xsd:attribute>
-            </xsd:extension>
-        </xsd:simpleContent>
-    </xsd:complexType>
+  <xsd:complexType name="type_helmsman">
+    <xsd:all>
+      <xsd:element name="helmsman_team" type="type_refid"></xsd:element>
+      <xsd:element name="first_name" type="xsd:string"></xsd:element>
+      <xsd:element name="last_name" type="xsd:string"></xsd:element>
+      <xsd:element name="nationality" type="type_country"></xsd:element>
+      <xsd:element name="championship_titles" type="type_amcup"></xsd:element>
+    </xsd:all>
+  </xsd:complexType>
 
-    <xsd:complexType name="type_place">
-        <xsd:simpleContent>
-            <xsd:extension base="xsd:string">
-                <xsd:attribute ref="place"></xsd:attribute>
-            </xsd:extension>
-        </xsd:simpleContent>
-    </xsd:complexType>
+  <xsd:complexType name="type_helmsmans">
+    <xsd:sequence>
+      <xsd:element name="helmsman" type="type_helmsman" minOccurs="2" maxOccurs="6"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
 
-    <xsd:complexType name="type_refid">
-        <xsd:simpleContent>
-            <xsd:extension base="xsd:string">
-                <xsd:attribute ref="refid"></xsd:attribute>
-            </xsd:extension>
-        </xsd:simpleContent>
-    </xsd:complexType>
+  <xsd:complexType name="type_yacht">
+    <xsd:sequence>
+      <xsd:element name="sailno"></xsd:element>
+      <xsd:element name="class" type="xsd:string"></xsd:element>
+      <xsd:element name="launched" type="xsd:positiveInteger"></xsd:element>
+      <xsd:element name="highest_speed" type="type_unit"></xsd:element>
+    </xsd:sequence>
+    <xsd:attribute ref="yacht_id"></xsd:attribute>
+  </xsd:complexType>
 
-    <xsd:complexType name="type_unit">
-        <xsd:simpleContent>
-            <xsd:extension base="xsd:string">
-                <xsd:attribute ref="unit"></xsd:attribute>
-            </xsd:extension>
-        </xsd:simpleContent>
-    </xsd:complexType>
+  <xsd:complexType name="type_yachts">
+    <xsd:sequence>
+      <xsd:element name="yacht" type="type_yacht" minOccurs="2" maxOccurs="6"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
 
-    <xsd:complexType name="type_team_yacht">
-        <xsd:sequence>
-            <xsd:element name="yacht_name" type="xsd:string"></xsd:element>
-            <xsd:element name="yacht_id" type="type_refid"></xsd:element>
-        </xsd:sequence>
-    </xsd:complexType>
+  <xsd:complexType name="type_localization">
+    <xsd:sequence>
+      <xsd:element name="city" type="type_place"></xsd:element>
+      <xsd:element name="country" type="type_country"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
 
-    <xsd:complexType name="type_team">
-        <xsd:sequence>
-            <xsd:element name="name" type="xsd:string"></xsd:element>
-            <xsd:element name="club" type="xsd:string"></xsd:element>
-            <xsd:element name="nationality" type="xsd:type_country"></xsd:element>
-            <xsd:element name="principal" type="xsd:string"></xsd:element>
-            <xsd:element name="tactician" type="xsd:string"></xsd:element>
-            <xsd:element name="victories" type="xsd:nonNegativeInteger"></xsd:element>
-            <xsd:element name="team_yacht" type="xsd:type_yacht"></xsd:element>
-        </xsd:sequence>
-        <xsd:attribute ref="id"></xsd:attribute>
-    </xsd:complexType>
+  <xsd:complexType name="type_regattas">
+    <xsd:sequence>
+      <xsd:element name="localization" type="type_localization"></xsd:element>
+      <xsd:element name="date" type="xsd:string"></xsd:element>
+      <xsd:element name="races" type="xsd:positiveInteger"></xsd:element>
+    </xsd:sequence>
+    <xsd:attribute ref="r_id"></xsd:attribute>
+  </xsd:complexType>
 
-    <xsd:complexType name="type_teams">
-        <xsd:sequence>
-            <xsd:element name="team" type="type_team" minOccurs="2" maxOccurs="6"></xsd:element>
-        </xsd:sequence>
-    </xsd:complexType>
+  <xsd:complexType name="type_world_series_regattas">
+    <xsd:sequence>
+      <xsd:element name="regattas" type="type_regattas" minOccurs="2" maxOccurs="10"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
 
-    <xsd:complexType name="type_helmsman">
-        <xsd:sequence>
-            <xsd:element name="helmsman_team" type="type_refid"></xsd:element>
-            <xsd:element name="first_name" type="xsd:string"></xsd:element>
-            <xsd:element name="last_name" type="xsd:string"></xsd:element>
-            <xsd:element name="nationality" type="xsd:type_country"></xsd:element>
-            <xsd:element name="championship_titles" type="xsd:type_amcup"></xsd:element>
-        </xsd:sequence>
-    </xsd:complexType>
+  <xsd:complexType name="type_AmericasCup">
+    <xsd:sequence>
+      <xsd:element name="teams" type="type_teams"></xsd:element>
+      <xsd:element name="helmsmans" type="type_helmsmans"></xsd:element>
+      <xsd:element name="yachts" type="type_yachts"></xsd:element>
+      <xsd:element name="world_series_regattas" type="type_world_series_regattas"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
 
-    <xsd:complexType name="type_helmsmans">
-        <xsd:sequence>
-            <xsd:element name="helmsman" type="type_helmsman" minOccurs="2" maxOccurs="6"></xsd:element>
-        </xsd:sequence>
-    </xsd:complexType>
+  <xsd:element name="AmericasCup" type="type_AmericasCup">
 
-    <xsd:complexType name="type_yacht">
-        <xsd:sequence>
-            <xsd:element name="sailno"></xsd:element>
-            <xsd:element name="class" type="xsd:string"></xsd:element>
-            <xsd:element name="launched" type="xsd:positiveInteger"></xsd:element>
-            <xsd:element name="highest_speed" type="xsd:type_unit"></xsd:element>
-        </xsd:sequence>
-        <xsd:attribute ref="yacht_id"></xsd:attribute>
-    </xsd:complexType>
-
-    <xsd:complexType name="type_yachts">
-        <xsd:sequence>
-            <xsd:element name="yacht" type="type_yacht" minOccurs="2" maxOccurs="6"></xsd:element>
-        </xsd:sequence>
-    </xsd:complexType>
-
-    <xsd:complexType name="type_localization">
-        <xsd:sequence>
-            <xsd:element name="city" type="xsd:place"></xsd:element>
-            <xsd:element name="country" type="type_country"></xsd:element>
-        </xsd:sequence>
-    </xsd:complexType>
-
-    <xsd:complexType name="type_regattas">
-        <xsd:sequence>
-            <xsd:element name="localization" type="type_localization"></xsd:element>
-            <xsd:element name="date" type="xsd:string"></xsd:element>
-            <xsd:element name="races" type="xsd:positiveInteger"></xsd:element>
-        </xsd:sequence>
-        <xsd:attribute ref="r_id"></xsd:attribute>
-    </xsd:complexType>
-
-    <xsd:complexType name="type_world_series_regattas">
-        <xsd:sequence>
-            <xsd:element name="regattas" type="type_regattas" minOccurs="2" maxOccurs="10"></xsd:element>
-        </xsd:sequence>
-    </xsd:complexType>
-
-    <xsd:complexType name="type_AmericasCup">
-        <xsd:sequence>
-            <xsd:element name="teams" type="type_teams"></xsd:element>
-            <xsd:element name="helmsmans" type="type_helmsmans"></xsd:element>
-            <xsd:element name="yachts" type="type_yachts"></xsd:element>
-            <xsd:element name="world_series_regattas" type="type_world_series_regattas"></xsd:element>
-        </xsd:sequence>
-    </xsd:complexType>
-
-    <xsd:element name="AmericasCup" type="type_AmericasCup"></xsd:element>
+    <!--<xsd:unique name="sailno">-->
+      <!--<xsd:selector xpath="yachts/yacht"/>-->
+      <!--<xsd:field xpath="sailno"/>-->
+    <!--</xsd:unique>-->
 
     <xsd:key name="team_key">
-        <xsd:selector xpath=".//teams/team"></xsd:selector>
-        <xsd:field xpath="@id"></xsd:field>
+      <xsd:selector xpath=".//teams/team"></xsd:selector>
+      <xsd:field xpath="@id"></xsd:field>
     </xsd:key>
     <xsd:keyref name="helmsman_team_ref" refer="team_key">
-        <xsd:selector xpath=".//helmsmans/helmsman/helmsman_team"></xsd:selector>
-        <xsd:field xpath="@refid"></xsd:field>
+      <xsd:selector xpath=".//helmsmans/helmsman/helmsman_team"></xsd:selector>
+      <xsd:field xpath="@refid"></xsd:field>
     </xsd:keyref>
     <xsd:key name="yacht_key">
-        <xsd:selector xpath=".//yachts/yacht"></xsd:selector>
-        <xsd:field xpath="@yacht_id"></xsd:field>
+      <xsd:selector xpath=".//yachts/yacht"></xsd:selector>
+      <xsd:field xpath="@yacht_id"></xsd:field>
     </xsd:key>
     <xsd:keyref name="yacht_id_ref" refer="yacht_key">
-        <xsd:selector xpath=".//teams/team/team_yacht/yacht_id"></xsd:selector>
-        <xsd:field xpath="@refid"></xsd:field>
+      <xsd:selector xpath=".//teams/team/team_yacht/yacht_id"></xsd:selector>
+      <xsd:field xpath="@refid"></xsd:field>
     </xsd:keyref>
 
+  </xsd:element>
 </xsd:schema>
